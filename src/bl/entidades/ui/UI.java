@@ -12,11 +12,8 @@ public class UI extends Application {
     Stage window = new Stage();
     VBox layout = new VBox(50);
     Button boton = new Button("Click");
-    
     Scene scene = new Scene(layout);
-   
-        
-       
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
         
