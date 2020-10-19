@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class UI extends Application {
     
@@ -23,6 +24,7 @@ public class UI extends Application {
         layout.setMinHeight(200);
         window.setScene(scene);
         window.setTitle("Titulo");
+        window.initStyle(StageStyle.TRANSPARENT);
         window.show();
         
     }

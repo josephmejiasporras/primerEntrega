@@ -3,10 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/primeraentrega/Gestor.java</file>
-            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/primeraentrega/UI.java</file>
-            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/primeraentrega/bl/entidades/Persona.java</file>
-            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/primeraentrega/Main.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/bl/entidades/Media.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/controlador/Controlador.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/bl/entidades/Cancion.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/bl/entidades/Imagen.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/Main.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/bl/entidades/ui/UI.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/bl/entidades/Audio.java</file>
+            <file>file:/C:/Users/capri/Documents/NetBeansProjects/primeraEntrega/src/bl/logica/Gestor.java</file>
         </group>
     </open-files>
 </project-private>
