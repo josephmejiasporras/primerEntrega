@@ -10,7 +10,6 @@ public class Gestor {
     protected static ArrayList<Artista> artistas = new ArrayList<>();
     protected static Cliente usuarioActual = new Cliente();
     
-    
     /* crea cliente y la registra en la bd de clientes*/
     public static void crearCliente(Cliente cliente) {
         getPersonas().add(cliente);
