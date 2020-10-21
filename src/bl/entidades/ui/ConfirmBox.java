@@ -1,6 +1,5 @@
 
 package bl.entidades.ui;
-
 import javafx.stage.Modality;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -17,8 +16,7 @@ public class ConfirmBox {
     public static boolean display(String title, String message){
         
         
-        Stage window = new Stage();
-        window.initModality(Modality.APPLICATION_MODAL);
+        Stage window = new Stage(); 
         window.setTitle(title);
         window.setMinWidth(150);
         Label label = new Label();

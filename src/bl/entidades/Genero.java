@@ -7,11 +7,13 @@
 package bl.entidades;
 
 
-abstract class Media {
+public class Genero {
     
-    private String location;
-    private String name;
-    private Cancion cancion;
-          
+    protected String nombre;
+    
+    public Genero(String nombre){
+        this.nombre= nombre;
+    }
+    
 
 }
