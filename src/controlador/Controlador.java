@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.control.*;
-import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -27,10 +27,10 @@ public class Controlador extends Application {
     /*ejecutando*/
     @Override
     public void start(Stage primaryStage) throws Exception {
-
+/*
         ui.loadLogo();
-        int action = ui.initApp();
-        switch (action) {
+        int action = ui.initApp();*/
+        switch (1) {
             case 1:
                 loadMain(ui.getUsuarioActual());
                 break;
@@ -45,10 +45,14 @@ public class Controlador extends Application {
         Stage stage = UI.getMainWindow();
         Button importar = new Button("Importar");
         Button confirmImport = new Button("Importar Cancion");
+        
         Button canciones = new Button("Canciones");
+        Button cuenta = new Button("Cuenta");
         Button artistas = new Button("Artistas");
         Button cerrar = new Button("X");
         Button AddPlaylist = new Button("+");
+        
+        Label bibliotecaLabel = new Label("Biblioteca");
         TextField songName = new TextField();
         TextField artistName = new TextField();
         BorderPane mainBorder = new BorderPane();
@@ -60,36 +64,25 @@ public class Controlador extends Application {
             Button inside = new Button(allPlaylists.get(i).getNombre());
             box.getChildren().addAll(inside);
         }
+        
+        HBox containerPlaylist = new HBox();
+        containerPlaylist.getChildren().addAll(playlists, AddPlaylist);
+        
         /*----------node*/
-        navigation.getChildren().addAll(importar, canciones, artistas, playlists, AddPlaylist, box);
+        navigation.getChildren().addAll(cuenta, importar, bibliotecaLabel, canciones, artistas, containerPlaylist, box);
 
         /* basic styling*/
-        navigation.setPadding(new Insets(10, 10, 10, 10));
-        songName.setMaxWidth(200);
-        songName.setPadding(new Insets(10, 10, 10, 10));
-        artistName.setMaxWidth(200);
-        artistName.setPadding(new Insets(10, 10, 10, 10));
+        
+        
 
-        importar.setPadding(new Insets(10, 10, 10, 10));
-        importar.setMinWidth(90);
-        confirmImport.setPadding(new Insets(10, 10, 10, 10));
-        confirmImport.setMinWidth(90);
-        canciones.setPadding(new Insets(10, 10, 10, 10));
-        canciones.setMinWidth(90);
-        artistas.setPadding(new Insets(10, 10, 10, 10));
-        artistas.setMinWidth(90);
-        playlists.setPadding(new Insets(10, 10, 10, 10));
-        playlists.setMinWidth(90);
-        AddPlaylist.setPadding(new Insets(10, 10, 10, 10));
-             
-                
-
-        /*load screen*/
+        /*load UI screen*/
         UI.loadMainCliente(cliente, cerrar, stage, navigation, mainBorder);
 
         /**
          * *acciones***
          */
+        
+        
         /* cerrar app */
         cerrar.setOnAction(e -> {
 
@@ -144,7 +137,9 @@ public class Controlador extends Application {
         });
 
         /*IMPORTAR*/
- /*Click Importar Cancion*/
+        
+        
+        /*Click Importar Cancion*/
         confirmImport.setOnAction(e -> {
 
             Cancion cancion = Gestor.crearCancion(songName.getText());
@@ -156,11 +151,16 @@ public class Controlador extends Application {
             songName.setText("");
 
         });
+        
+        
+        
 
         /*showAndWait*/
         stage.showAndWait();
     }
 
+    /////////////////////////////////////////////////////////////////////
+    
     /*carga interfaz dependiendo de Usuario*/
     private void loadMain(Persona usuarioActual) {
 

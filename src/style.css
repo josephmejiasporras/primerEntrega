@@ -1,0 +1,47 @@
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat/Montserrat-Light.ttf');
+}
+
+
+.root{
+    -fx-background-color: #1a1a1a;
+    -fx-border-width: 2px;
+    -fx-border-color: darkcyan;
+}
+
+.button{
+    -fx-cursor: hand;
+    -fx-text-alignment: left;
+    -fx-border-radius: 5px;
+    -fx-font-size: 20px;
+    -fx-font-weight: 500;
+    -fx-font-family: 'Montserrat';
+    -fx-text-fill: white;
+    -fx-background-color: #1a1a1a;
+    -fx-margin: 15px;
+    -fx-padding: 5 0 5 30;
+}
+.button:hover{
+    
+    -fx-opacity: 0.6;
+    -fx-text-fill: white;
+}
+
+.navigationBar{
+    -fx-padding: 10;
+    -fx-min-width: 250px;
+}
+
+.closeButton{
+    -fx-min-width: 20;
+}
+
+.label{
+    -fx-padding: 4 0 4 25;
+    -fx-font-weight: 600;
+    -fx-font-size: 27px;
+    -fx-text-fill: white;
+}

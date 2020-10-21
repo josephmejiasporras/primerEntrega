@@ -21,6 +21,7 @@ import javafx.geometry.Insets;
 import javafx.animation.PauseTransition;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.css.PseudoClass;
 import javafx.scene.control.Label;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
@@ -33,13 +34,15 @@ import javafx.util.Duration;
 
 public class UI extends Application {
     
+
     /*init*/
-    private final static Stage initWindow = new Stage();
-    private final static Stage loginWindow = new Stage();
-    private static final Stage principal = new Stage();
-    private final Administrador usuarioActual2 = new Administrador();
-    private static final int cent = 0;
-    private int chosen;
+    protected static Stage initWindow = new Stage();
+    protected static Stage loginWindow = new Stage();
+    protected static  Stage principal = new Stage();
+    protected Administrador usuarioActual2 = new Administrador();
+    protected static int cent = 0;
+    protected int chosen;
+    
     @Override
     public void start(Stage primaryStage) throws Exception {
 
@@ -71,22 +74,26 @@ public class UI extends Application {
         closeMenu.setAlignment(Pos.TOP_RIGHT);
         closeMenu.getChildren().addAll(cerrar);
         topMenu.getChildren().addAll(closeMenu);
-        
+        cerrar.getStyleClass().add("closeButton");
         /*LeftBar*/
         
         
-        navigation.setMinWidth(300);
-        
+        navigation.getStyleClass().add("navigationBar");
+        navigation.setAlignment(Pos.TOP_LEFT);
         /*Estructura*/
         mainBorder.setTop(topMenu);
         mainBorder.setLeft(navigation);
         mainBorder.setMinHeight(700);
         mainBorder.setMinWidth(1200);
         Scene scene = new Scene(mainBorder);
+        scene.getStylesheets().add("style.css");
+        mainWindow.initStyle(StageStyle.UNDECORATED);
         mainWindow.setScene(scene);
         
     }
 
+    
+    
     /* recibe objetos de control y devuelve escena de Importar cancion */
     public static VBox importScene(TextField songName, TextField artistName, Button confirmImport){
     
@@ -98,6 +105,10 @@ public class UI extends Application {
         
         return importLayout;
     }
+    
+    
+    
+    
     
     
     /* recibe arraylist de nombres y devuelve escena de artistas */
@@ -131,6 +142,10 @@ public class UI extends Application {
     }
     
     
+    
+    
+    
+    
     public static TableView playlistView(ArrayList<Artista> artistas){
         
         
@@ -157,6 +172,10 @@ public class UI extends Application {
         
         return songsLayout;
     }
+    
+    
+    
+    
     
     
     private static String retornando;
@@ -269,7 +288,7 @@ public class UI extends Application {
     }
 
     /**
-     *
+     * 
      * @throws java.io.FileNotFoundException
      * @throws java.lang.InterruptedException
      */
